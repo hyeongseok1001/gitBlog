@@ -1,0 +1,347 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* End of Resetting CSS */
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url("../Press_Start_2P/PressStart2P-Regular.ttf");
+}
+
+header {
+  width: 100%;
+  padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Press Start 2P";
+  background-color: #f3ffc8;
+  font-weight: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.title__header {
+  padding-top: 1.5em;
+  padding-left: 2em;
+}
+
+.title__header a {
+  color: #72b8db;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .menu {
+  margin-left: 2em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .menu li {
+  /* line-height: 30px; */
+  vertical-align: middle;
+  /* text-align: center; */
+  height: 2rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+}
+
+nav .menu li a {
+  color: #c75a00;
+}
+
+nav .menu li:hover {
+  border-radius: 3rem;
+  background-color: #fffb00;
+  font-size: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .search {
+  margin-top: 1.4em;
+  margin-right: 1.3em;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+nav .search #searchIcon {
+  color: #72b8db;
+}
+
+.subMenu {
+  display: none;
+  opacity: 0;
+  margin-top: 2em;
+  text-align: center;
+  background-color: #f3ffc8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.subMenu #WEB div, .subMenu #CS div {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.subMenu #WEB ul li, .subMenu #CS ul li {
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.subMenu #WEB ul li margin, .subMenu #CS ul li margin {
+  top: 2rem;
+}
+
+.subMenu #WEB ul li:hover, .subMenu #CS ul li:hover {
+  font-size: 0.6rem;
+  border-radius: 3rem;
+  background-color: #fffb00;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.subMenu #WEB {
+  border-right: 1px solid #72b8db;
+}
+
+.appear {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.disappear {
+  -webkit-animation: fade-out 0.5s;
+          animation: fade-out 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+main {
+  margin: 3%;
+}
+
+.main__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 200px 200px 200px 200px 200px;
+      grid-template-rows: 200px 200px 200px 200px 200px;
+}
+
+.main__container .main__item {
+  border: 1px solid grey;
+  margin: 3px;
+}
+
+footer {
+  border-top: 1px solid lightblue;
+  width: 100%;
+  padding-top: 20px;
+}
+
+footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+  margin-right: 2.5em;
+}
+
+footer .info .author {
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .info .author .name {
+  font-size: 17px;
+  font-weight: bold;
+  color: lightgray;
+}
+
+footer .info .author .email {
+  padding-left: 5%;
+  font-size: 17px;
+  color: lightgray;
+}
+
+footer .info .externLinks {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 1024px) {
+  header {
+    display: block;
+  }
+  header nav {
+    margin-top: 1em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav .subMenu {
+    margin-right: 10em;
+  }
+  header nav .search {
+    margin-right: 3em;
+  }
+}
+
+@media (max-width: 840px) {
+  header .title__header {
+    display: inline-block;
+    padding-bottom: 0em;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header nav .subMenu {
+    margin-left: 2em;
+  }
+  header nav .search {
+    margin-top: 2em;
+    margin-left: 3em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

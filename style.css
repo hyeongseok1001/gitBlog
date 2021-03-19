@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('./Press_Start_2P/PressStart2P-Regular.ttf');
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Press Start 2P';
+}
+
+.title__header {
+  padding-top: 24px;
+  padding-left: 4%;
+}
+
+.title__header a {
+  color: #72b8db;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav .menu {
+  margin-right: 15%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+nav .menu > li {
+  /* line-height: 30px; */
+  vertical-align: middle;
+  /* text-align: center; */
+  height: 30px;
+  width: 120px;
+  padding-top: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+nav .menu > li:hover {
+  border-radius: 30%;
+  background-color: rgb(245, 219, 71);
+  font-size: 1.2rem;
+}
+
+.menu__stacks:hover{
+    margin-bottom: 80px;
+}
+
+.menu__stacks:hover .subMenu {
+  display:block;
+  width: 100px;
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+.subMenu {
+  display:none;
+}
+
+.subMenu > li {
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.subMenu > li:hover {
+  font-size: 1.1rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+main {
+  margin: 3%;
+}
+
+.main__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px 200px 200px;
+}
+
+.main__container .main__item{
+  border: 1px solid grey;
+  margin: 3px;
+  background-color: rgb(255, 161, 73);
+
+}
+
+
+
+footer {
+  border-top: 1px solid lightblue;
+  width: 100%;
+  padding-top: 20px;
+}
+
+footer .author {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.author .name {
+  font-size: 17px;
+  font-weight: bold;
+  color: lightgray;
+  padding-left: 45%;
+  padding-right: 10%;
+}
+
+.author .email {
+  font-size: 17px;
+  color: lightgray;
+}

@@ -1,0 +1,328 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+  }
+
+/* End of Resetting CSS */
+
+@font-face {
+	font-family: 'Press Start 2P';
+	src: url('../Press_Start_2P/PressStart2P-Regular.ttf');
+  }
+
+$fontFamily : 'Press Start 2P';
+$titleHColor : #72b8db;
+$menuBgColor : rgb(255, 251, 0);
+$backgroundColor : rgb(243, 255, 200);
+$menuTxColor: rgb(199, 90, 0);
+
+header {
+	width: 100%;
+	padding-bottom: 1em;
+	display: flex;
+	justify-content: space-between;
+	font-family: $fontFamily;
+	background-color: $backgroundColor;
+	font-weight: normal;
+	box-sizing: border-box;
+  }
+
+.title__header {
+	padding-top: 1.5em;
+ 	padding-left: 2em;
+	  a {
+			color: $titleHColor;
+			font-size: 2rem;
+			font-weight: bold;
+		 }
+}
+
+
+
+
+
+//.menu__stacks {
+//	#subMenu {
+//		display: flex;
+//		flex-wrap: wrap;
+//		justify-content: flex-start;
+//		//padding-left: 0;
+//		//padding-right: 0;
+//		margin: 0;
+//		width: 100%;
+		//div {
+		//	font-size: 0.7rem;
+		//	padding-top: 1rem;
+		//	padding-bottom: 1rem;
+		//	&:hover{
+		//		//background-color: none;
+		//		font-size: 1rem;
+		//		text-align: left;
+		//		//padding-top: 1.2rem;
+		//		//padding-bottom: 1.2rem;
+		//	}
+
+//	&:hover {
+//		display: flex;
+//		flex-direction: row;
+//		margin-bottom: 10em;
+//		#web, #CS {
+//			font-size: 1.5rem;
+//			//display:flex;
+//			//flex-direction: column;
+//			width: 100%;
+//			padding-top: 3rem;
+//		}
+//	}
+//}
+
+
+
+nav {
+	display: flex;
+	.menu {
+		margin-left: 2em;
+		margin-right: 0.5em;
+		margin-top: 1em;
+  		display: flex;
+ 		justify-content: space-around;
+ 	 	//font-size: 1em;
+		li {
+			/* line-height: 30px; */
+  			vertical-align: middle;
+  			/* text-align: center; */
+  			height: 2rem;
+  			//width: 8rem;
+  			padding-top: 1rem;
+  			padding-left: 2rem;
+  			padding-right: 2rem;
+			//margin-left: 0.5rem;
+			//margin-right: 0.5rem;
+			font-size: 1.2rem;
+			a {
+				color: $menuTxColor;
+			}
+			&:hover {
+				border-radius: 3rem;
+				background-color: $menuBgColor;
+				font-size: 1rem;
+				transition: 0.3s;
+				}
+
+			}
+		  }
+		  .search {
+			  margin-top: 1.4em;
+			  margin-right: 1.3em;
+			  width: 30px;
+			  height: 30px;
+			  padding-bottom: 20px;
+			  padding-right: 20px;
+			#searchIcon {
+				  color: $titleHColor;
+			  }
+		}
+	}
+
+	.subMenu {
+		display: none;
+		opacity: 0;
+		margin-top: 2em;
+		text-align: center;
+		background-color: $backgroundColor;
+		box-sizing: border-box;
+		#WEB, #CS {
+			div {
+				font-size: 1.3rem;
+				margin-bottom: 2rem;
+			}
+			ul{
+				li {
+					font-weight: normal;
+					margin {
+						top: 2rem;
+					}
+					font-size: 0.8rem;
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+					margin-left: 2rem;
+					margin-right: 2rem;
+					padding-top: 0.5rem;
+					padding-bottom: 0.5rem;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					&:hover {
+						font-size: 0.6rem;
+						border-radius: 3rem;
+						background-color: $menuBgColor;
+						transition: 0.3s;
+
+					}
+				} 
+			}
+		}
+		#WEB {
+			border-right: 1px solid $titleHColor;
+		}
+	}
+
+.appear {
+	animation: fade-in 1s;
+	animation-fill-mode: forwards;
+	display: flex;
+}
+.disappear {
+	animation: fade-out 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade-out {
+	from {
+		opacity: 1;
+		}
+	to {
+		opacity: 0;
+	}
+}
+
+main {
+	margin: 3%;
+  }
+
+.main__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 200px 200px 200px 200px;
+	 .main__item {
+		border: 1px solid grey;
+		margin: 3px;
+		//background-color: $menuBgColor;
+	}
+}
+
+footer {
+	border-top: 1px solid lightblue;
+	width: 100%;
+	padding-top: 20px;
+	.info {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		margin-right: 2.5em;
+		.author {
+			padding-left: 5%;
+			display: flex;
+			 .name {
+				font-size: 17px;
+				font-weight: bold;
+				color: lightgray;
+			}
+			 .email {
+				padding-left: 5%;
+				font-size: 17px;
+				color: lightgray;
+			}
+		}
+		.externLinks {
+			width: 30px;
+			height: 30px;
+			padding-bottom: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	header {
+		display: block;
+			nav {
+				margin-top: 1em;
+				justify-content: space-between;
+				.subMenu {
+					margin-right: 10em;
+				}
+				.search {
+					margin-right: 3em;
+				}
+			}
+		
+	}
+
+}
+
+@media (max-width: 840px) {
+	header {
+		.title__header {
+			display: inline-block;
+			padding-bottom: 0em;
+		}
+		nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.subMenu {
+				margin-left: 2em;
+			}
+			.search {
+				margin-top: 2em; 
+				margin-left: 3em;
+			}
+		}
+	}
+}

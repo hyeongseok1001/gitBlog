@@ -15,7 +15,7 @@ mongoose.connect('mongodb://localhost:27017/gitBlog', { useNewUrlParser: true, u
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('GITBLOG IS LISTENING ON PORT 3000!');
 })
 
